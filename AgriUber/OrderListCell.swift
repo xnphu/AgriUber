@@ -17,6 +17,8 @@ class OrderListCell: UITableViewCell {
     @IBOutlet weak var endLocationLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var stateView: UIView!
+    @IBOutlet weak var dashLineView: UIView!
+    @IBOutlet weak var verticalDashView: UIView!
     
     
     override func awakeFromNib() {

@@ -11,7 +11,7 @@ import UIKit
 class OrderListVC: UIViewController {
 
     @IBOutlet weak var tblView: UITableView!
-
+        
     var orderLists = [Order]()
     
     override func viewDidLoad() {
@@ -20,6 +20,7 @@ class OrderListVC: UIViewController {
         tblView.delegate = self
         tblView.dataSource = self
         loadOrderLists()
+        
 //        orderView.addShadow(shadowColor: .blue, offSet: CGSize(width: 2.6, height: 2.6), opacity: 0.8, shadowRadius: 5.0, cornerRadius: 20.0, corners: [.bottomRight, .topRight])
     }
     
@@ -72,8 +73,9 @@ extension OrderListVC: UITableViewDelegate, UITableViewDataSource {
             cell.stateLabel.textColor = #colorLiteral(red: 0.2980392157, green: 0.6901960784, blue: 0.7176470588, alpha: 1)
         }
         
+        cell.dashLineView.drawDashTicket()
+        cell.verticalDashView.drawDashLine(isVertical: true)
+        
         return cell
     }
-    
-    
 }
